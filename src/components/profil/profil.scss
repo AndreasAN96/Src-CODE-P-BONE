@@ -1,0 +1,140 @@
+@import '../../global.scss';
+
+.profil{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include mobile{
+        justify-content: space-around;           
+    }
+
+    h1{
+        font-size: 50px;
+
+        @include mobile{
+            font-size: 20px;   
+        }
+    }
+
+    .container{
+        width: 100%;
+        height: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include mobile{
+            flex-direction: column;
+            height: 100%;
+               
+        }
+
+        .card{
+            width: 170px;
+            height: 60%;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px -8px black;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 20px;
+            transition: all 1s ease;
+
+            @include mobile{
+               height: 160px;
+               margin: 10px 0;
+            }
+
+            &.featured{
+                width: 200px;
+                height: 75%;
+                margin: 0 10px;
+
+                @include mobile{
+                    width: 200px;
+                    height: 180px;
+                    margin: 1px;
+                }
+            }
+
+            &.featured1{
+                width: 170px;
+                height: 70%;
+                margin: 0 20px;
+
+                @include mobile{
+                    width: 180px;
+                    height: 180px;
+                    margin: 1px;
+                }
+
+                
+            }
+
+            &:hover{
+                transform: scale(1.1);
+            }
+
+            .top{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img{
+                  
+                    &.gambar{
+                        height: 120px;
+                        width: 120px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                        margin: 0 30px;
+
+                        @include mobile{
+                            width: 40px;
+                            height: 30px;
+
+                        }
+                    }
+                }
+            }
+
+                .center{
+                    padding: 10px;
+                    border-radius: 10px;
+                    background-color: rgb(250, 244, 245);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    @include mobile{
+                        display: none;
+                    }
+
+                    img{
+                        &.fb,&.ig,&.tw{
+                            height: 35px;
+                            margin: 0 10px;
+                            cursor: pointer;      
+                            
+                        }
+                    }
+                }
+                .bottom{
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    h3{
+                        margin-bottom: 5px;
+
+                        @include mobile{
+                            font-size: 14px;
+                        }
+                }
+            }
+        }
+    }
+}
